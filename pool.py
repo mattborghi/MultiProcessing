@@ -7,7 +7,7 @@ def function(x):
     f = open("10mb.txt", "r")
     for line in f:
         pass
-    # print("process: " + str(x))
+    # print("job: " + str(x))
     return x
 
 if __name__ == '__main__':
