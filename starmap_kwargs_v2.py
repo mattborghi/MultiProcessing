@@ -56,7 +56,7 @@ def main(**kwargs):
 		payload_var[index_variation] = (payload.copy())
 		headers_var[index_variation] = (headers.copy())
 
-	#print(headers)
+	print(type(headers_var))
 	#print(payload)
 	#for lista in list_dictionary:
 	#	print(lista)
@@ -65,7 +65,7 @@ def main(**kwargs):
 	project_name = 'project_name'
 	api_extensions = 'asd' #['asd','ijk','lmn','opq']
 	key = True
-	pool = mp.Pool(4)
+	pool = mp.Pool(mp.cpu_count())
 	
 	args_iter = zip(repeat(project_name),repeat(api_extensions),payload_var,headers_var,repeat(key))#(dict(project_name=project_name,api_extensions=elem,headers=headers) for elem in api_extensions) #zip(repeat(project_name), api_extensions)
 	#for elem in list(args_iter):
